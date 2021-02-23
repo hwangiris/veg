@@ -1,20 +1,24 @@
 header {
     // position: fixed;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+    // background-color: rgba($white, 0.95);
     z-index: 5;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1200px) {
         padding-top: 1.65rem;
         padding-bottom: 1.65rem;
     }
     .container {
         > .display-flex {
-            align-items: flex-start;
+            align-items: center;
             justify-content: space-between;
+            @media screen and (min-width: 1200px) {
+                align-items: flex-start;
+            }        
         }
     }
     .flex {
@@ -31,14 +35,11 @@ header {
 }
 
 .hamburger {
-    position: absolute;
-    top: 50%;
-    right: 15px;
+    position: relative;
     width: 30px;
     height: 23px;
-    @include translateY(-50%);
     z-index: 1;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1200px) {
         display: none;
     }
     span {
@@ -71,7 +72,7 @@ header {
 }
 
 nav {
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 1199px) {
         display: none;
         position: fixed;
         top: 4.5rem;
@@ -80,16 +81,18 @@ nav {
         padding: 20px;
         background-color: rgba($white, 0.95);
     }
-    @media screen and (min-width: 1024px) {
-        display: block !important;
+    @media screen and (min-width: 1200px) {
+        display: flex !important;
+        flex-wrap: wrap;
     }
     ul {
-        @include listreset(0, 0, none);
+        @include listreset(0 auto, 0, none);
         font-size: 0;
-        @media screen and (max-width: 1023px) {
+        @media screen and (min-width: 1200px) {
+            margin-right: 50px;
+        }
+        @media screen and (max-width: 1199px) {
             display: table;
-            margin-left: auto;
-            margin-right: auto;
             width: calc(($h5 * 4) + 40px);
         }
         li {
@@ -136,6 +139,7 @@ nav {
 }
 
 .line-btn {
+    align-items: center;
     background-color: $white;
     @include border-radius(50px);
     @include box-shadow(1px 1.5px 10px rgba($black, 0.1));

@@ -1,13 +1,18 @@
 a.btn {
     display: inline-block;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 1rem;
     line-height: 2.375;
     text-align: center;
+    word-break: keep-all;
     border: 1px solid;
     @include border-radius(40px);
     outline: 0;
+    @media screen and (min-width: 1024px) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
     &.btn-green {
         color: $green;
         border-color: $green;
