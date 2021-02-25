@@ -8,21 +8,55 @@
 @import "_embed";
 @import "_header";
 @import "_footer";
+@import "_scroll-btn";
+@import "_crosscut";
+@import "_top";
 
 section {
-    @media screen and (min-width: 1024px) {
-        height: 100vh;
-    }
-    > .container-fluid {
-        @media screen and (min-width: 1024px) {
+    > .fp-tableCell {
+        display: block;
+        > .container-fluid {
             height: 100%;
+            > .row {
+                height: 100%;
+                &.row-md-reverse {
+                    flex-direction: row-reverse;
+                }
+            }
         }
-        > .row {
-            @media screen and (min-width: 1024px) {
+    }
+    .fp-scroller {
+        height: 100%;
+        > .container-fluid {
+            height: 100%;
+            > .row {
                 height: 100%;
             }
+        }
+    }
+    > .container-fluid {
+        height: 100%;
+        > .row {
+            height: 100%;
             &.row-md-reverse {
                 flex-direction: row-reverse;
+            }
+        }
+    }
+    @include breakpoint(1024px) {
+        .wow {
+            visibility: initial !important;
+            @include opacity(0);
+            @include transition(opacity 0.3s);
+            @include animation-duration(1s);
+            @include animation-fill-mode(both);
+        }
+        &.active {
+            .fadeInUp {
+                @include animation-name(fadeInUp !important);
+            }
+            .fadeIn {
+                @include animation-name(fadeIn !important);
             }
         }
     }

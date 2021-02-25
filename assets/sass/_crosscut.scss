@@ -1,0 +1,38 @@
+.crosscut-block {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background-color: $gray;
+    z-index: 5;
+    @include breakpoint(1024px) {
+        display: none;
+    }
+    .row {
+        align-items: center;
+        justify-content: space-between;
+    }
+    .crosscut-title {
+        margin-right: 1em;
+    }
+    a.btn {
+        @include button($black, $green);
+        min-width: auto;
+        padding: 0 7px;
+        vertical-align: middle;
+        @include border-radius(50px);
+        @include breakpoint(1024px) {
+            min-width: auto;
+        }
+        &:hover, &:active, &.active, &:focus {
+            color: $white;
+            background-color: $black;        
+        }
+        i.icon {
+            display: block;
+            padding: 7px 0;
+            font-weight: bold;
+        }
+    }
+}

@@ -1,108 +1,108 @@
-$icomoon-font-family: "law" !default;
-$icomoon-font-path: "../fonts" !default;
+$icomoon-font-family:"veg" !default;
+$icomoon-font-path:"../fonts" !default;
 
-$icon-message-square: "\e906";
-$icon-clock: "\e905";
-$icon-twitter: "\e904";
-$icon-sinaweibo: "\e901";
-$icon-line: "\e902";
-$icon-fb: "\e903";
-$icon-facebook: "\e900";
-$icon-map-marker: "\f041";
-$icon-phone: "\f095";
-$icon-envelope: "\f0e0";
-$icon-angle-up: "\f106";
-$icon-fax: "\f1ac";
+$icon-chevron-left:"\e909";
+$icon-play_arrow:"\e901";
+$icon-scroll:"\e90a";
+$icon-close:"\e902";
+$icon-facebook:"\e903";
+$icon-line:"\e904";
+$icon-mail:"\e905";
+$icon-map:"\e906";
+$icon-phone:"\e907";
+$icon-search:"\e908";
+$icon-logo:"\e900";
 
 @font-face {
-  font-family: "#{$icomoon-font-family}";
-  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?byuil0");
-  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?byuil0#iefix")
-      format("embedded-opentype"),
-    url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?byuil0")
-      format("truetype"),
-    url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?byuil0")
-      format("woff"),
-    url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?byuil0##{$icomoon-font-family}")
-      format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+    font-family: '#{$icomoon-font-family}';
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?yolxyp');
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?yolxyp#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?yolxyp') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?yolxyp') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?yolxyp##{$icomoon-font-family}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
 }
 
 [class^="icon-"],
 [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "#{$icomoon-font-family}" !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-scroll {
+    &:before {
+      content: $icon-scroll; 
+    }
+  }
+  
+.icon-headphones:before {
+    content:"\e900";
+}
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.icon-chevron-left {
+    &:before {
+        content: $icon-chevron-left;
+    }
 }
 
-.icon-message-square {
-  &:before {
-    content: $icon-message-square;
-  }
+.icon-play_arrow {
+    &:before {
+        content: $icon-play_arrow;
+    }
 }
-.icon-clock {
-  &:before {
-    content: $icon-clock;
-  }
+
+.icon-close {
+    &:before {
+        content: $icon-close;
+    }
 }
-.icon-twitter {
-  &:before {
-    content: $icon-twitter;
-  }
-}
-.icon-sinaweibo {
-  &:before {
-    content: $icon-sinaweibo;
-  }
-}
-.icon-line {
-  &:before {
-    content: $icon-line;
-  }
-}
-.icon-fb {
-  &:before {
-    content: $icon-fb;
-  }
-}
+
 .icon-facebook {
-  &:before {
-    content: $icon-facebook;
-  }
+    &:before {
+        content: $icon-facebook;
+    }
 }
-.icon-map-marker {
-  &:before {
-    content: $icon-map-marker;
-  }
+
+.icon-line {
+    &:before {
+        content: $icon-line;
+    }
 }
+
+.icon-mail {
+    &:before {
+        content: $icon-mail;
+    }
+}
+
+.icon-map {
+    &:before {
+        content: $icon-map;
+    }
+}
+
 .icon-phone {
-  &:before {
-    content: $icon-phone;
-  }
+    &:before {
+        content: $icon-phone;
+    }
 }
-.icon-envelope {
-  &:before {
-    content: $icon-envelope;
-  }
+
+.icon-search {
+    &:before {
+        content: $icon-search;
+    }
 }
-.icon-angle-up {
-  &:before {
-    content: $icon-angle-up; 
-  }
-}
-.icon-fax {
-  &:before {
-    content: $icon-fax;
-  }
+
+.icon-logo {
+    &:before {
+        content: $icon-logo;
+    }
 }

@@ -10,6 +10,10 @@ a.btn {
     @include border-radius(40px);
     outline: 0;
     @media screen and (min-width: 1024px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media screen and (min-width: 1200px) {
         padding-left: 40px;
         padding-right: 40px;
     }
