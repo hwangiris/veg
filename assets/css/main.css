@@ -5786,6 +5786,7 @@ section .img-shadow::before {
   background-image: -moz-linear-gradient(top, rgba(23, 27, 23, 0) 0%, #171b17 100%);
   background-image: -webkit-linear-gradient(top, rgba(23, 27, 23, 0) 0%, #171b17 100%);
   background-image: linear-gradient(to bottom, rgba(23, 27, 23, 0) 0%, #171b17 100%);
+  z-index: -1;
 }
 @media screen and (max-width: 1023px) {
   section .btn-group {
@@ -6560,11 +6561,15 @@ section .grid-group .grid-item:hover > span.grid-hover {
   position: relative;
   height: 100%;
 }
-.map-group .map-img > .row {
-  height: 100%;
-}
-.map-group .map-img img {
-  width: 100%;
+@media screen and (min-width: 1024px) {
+  .map-group .map-img > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 @media (min-width: 1280px) {
   .map-group .map-text {

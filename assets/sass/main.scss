@@ -155,6 +155,7 @@ section {
             right: 0;
             @include beforeafter('', block);
             @include background-image(linear-gradient(top, rgba($black, 0) 0%, $black 100%));
+            z-index: -1;
         }
     }
     .btn-group {
@@ -283,11 +284,15 @@ section {
     .map-img {
         position: relative;
         height: 100%;
-        > .row {
-            height: 100%;
-        }
-        img {
-            width: 100%;
+        @media screen and (min-width: 1024px) {
+            > img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
     .map-text {

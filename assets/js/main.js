@@ -21,6 +21,7 @@ $(function () {
 		});
 	} else {
 		$('.jumbotron-product .col-op-img').height($('.jumbotron-product .col-op-txt').outerHeight());
+		$('.map-group .map-img').css('min-height', $('.map-group .map-text').outerHeight());
 	}
 	$('a.smooth-scroll[href*="#"]:not([href="#"])').on("click", function() {
 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
