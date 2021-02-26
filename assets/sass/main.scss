@@ -14,6 +14,7 @@
 @import "_top";
 
 section {
+    position: relative;
     .container-fluid {
         height: 100%;
         > .row {

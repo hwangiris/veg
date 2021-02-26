@@ -5624,6 +5624,9 @@ footer b {
   transform: rotate(-90deg) scale(0.75);
 }
 
+section {
+  position: relative;
+}
 section .container-fluid {
   height: 100%;
 }
