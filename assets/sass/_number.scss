@@ -1,0 +1,219 @@
+.number-group {
+    position: absolute !important;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    height: auto !important;
+    margin: auto !important;
+    justify-content: center;
+    @include translateX(-50%);
+    .number-item {
+        color: $white;
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.25;
+        text-shadow: 0 0 15px $black;
+        @include breakpoint(1024px) {
+            font-size: 24px;
+        }
+        >.count {
+            position: relative;
+            display: inline-block;
+            height: calc(24px * 1.25);
+            padding: 0 3px;
+            font-size: 24px;
+            font-weight: 500;
+            vertical-align: bottom;
+            overflow: hidden;
+            @include breakpoint(1024px) {
+                height: calc(28px * 1.25);
+                font-size: 28px;
+            }
+            .count-group {
+                position: relative;
+                i {
+                    display: block;
+                    font-style: inherit;
+                    text-align: right;
+                }
+            }
+            &.active {
+                .count-group-4 {
+                    @include animation(count-4-step 1s alternate forwards);
+                }
+                .count-group-5 {
+                    @include animation(count-5-step 1s alternate forwards);
+                }
+                .count-group-6 {
+                    @include animation(count-6-step 1s alternate forwards);
+                }
+            }
+        }
+        @include breakpoint(max-width 1023px) {
+            br {
+                display: none;
+            }
+        }
+    }
+}
+section.active {
+    .count-group-4 {
+        @include breakpoint(1024px) {
+            @include animation(count4stepd 0.75s alternate forwards);
+        }
+        @include breakpoint(max-width 1023px) {
+            @include animation(count4stepm 0.75s alternate forwards);
+        }
+    }
+    .count-group-5 {
+        @include breakpoint(1024px) {
+            @include animation(count5stepd 1.25s alternate forwards);
+        }
+        @include breakpoint(max-width 1023px) {
+            @include animation(count5stepm 1.25s alternate forwards);
+        }
+    }
+    .count-group-6 {
+        @include breakpoint(1024px) {
+            @include animation(count6stepd 1.5s alternate forwards);
+        }
+        @include breakpoint(max-width 1023px) {
+            @include animation(count6stepm 1.5s alternate forwards);
+        }
+    }
+}
+
+@include keyframes(count4stepd) {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: -35px;
+    }
+    50% {
+        top: -70px;
+    }
+    75% {
+        top: -105px;
+    }
+    100% {
+        top: -140px;
+    }
+}
+
+@include keyframes(count5stepd) {
+    0% {
+        top: 0;
+    }
+    20% {
+        top: -35px;
+    }
+    40% {
+        top: -70px;
+    }
+    60% {
+        top: -140px;
+    }
+    80% {
+        top: -175px;
+    }
+    100% {
+        top: -210px;
+    }
+}
+
+@include keyframes(count6stepd) {
+    0% {
+        top: 0;
+    }
+    13% {
+        top: -35px;
+    }
+    26% {
+        top: -70px;
+    }
+    39% {
+        top: -105px;
+    }
+    52% {
+        top: -140px;
+    }
+    65% {
+        top: -175px;
+    }
+    78% {
+        top: -210px;
+    }
+    100% {
+        top: -245px;
+    }
+}
+
+@include keyframes(count4stepm) {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: -30px;
+    }
+    50% {
+        top: -60px;
+    }
+    75% {
+        top: -90px;
+    }
+    100% {
+        top: -120px;
+    }
+}
+
+@include keyframes(count5stepm) {
+    0% {
+        top: 0;
+    }
+    16% {
+        top: -30px;
+    }
+    32% {
+        top: -60px;
+    }
+    48% {
+        top: -90px;
+    }
+    64% {
+        top: -120px;
+    }
+    72% {
+        top: -150px;
+    }
+    100% {
+        top: -180px;
+    }
+}
+
+@include keyframes(count6stepm) {
+    0% {
+        top: 0;
+    }
+    13% {
+        top: -30px;
+    }
+    26% {
+        top: -60px;
+    }
+    39% {
+        top: -90px;
+    }
+    52% {
+        top: -120px;
+    }
+    65% {
+        top: -150px;
+    }
+    78% {
+        top: -180px;
+    }
+    100% {
+        top: -210px;
+    }
+}

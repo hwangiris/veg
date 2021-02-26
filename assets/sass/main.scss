@@ -1,5 +1,6 @@
 @import "_mixin";
 @import "_variable";
+@import "_normalize";
 @import "_common";
 @import "_container";
 @import "_typography";
@@ -13,34 +14,21 @@
 @import "_top";
 
 section {
-    > .fp-tableCell {
-        display: block;
-        > .container-fluid {
-            height: 100%;
-            > .row {
-                height: 100%;
-                &.row-md-reverse {
-                    flex-direction: row-reverse;
-                }
-            }
-        }
-    }
-    .fp-scroller {
-        height: 100%;
-        > .container-fluid {
-            height: 100%;
-            > .row {
-                height: 100%;
-            }
-        }
-    }
-    > .container-fluid {
+    .container-fluid {
         height: 100%;
         > .row {
             height: 100%;
             &.row-md-reverse {
                 flex-direction: row-reverse;
             }
+        }
+    }
+    .row {
+        &.row-md-reverse {
+            flex-direction: row-reverse;
+        }
+        &.align-items-center {
+            align-items: center;
         }
     }
     @include breakpoint(1024px) {
@@ -57,6 +45,39 @@ section {
             }
             .fadeIn {
                 @include animation-name(fadeIn !important);
+            }
+        }
+    }
+    .slider-opening {
+        height: 100%;
+        .slick-list, .slick-track, .slick-slide {
+            height: 100%;
+        }
+        .main-title {
+            font-size: $h1;
+            @media screen and (min-width: 1199px) {
+                font-size: $h0;
+            }
+        }
+    }
+    .col-op-txt {
+        position: relative;
+        z-index: 1;
+        @include breakpoint(max-width 1023px) {
+            padding-top: 120px;
+        }
+    }
+    .col-op-img {
+        position: relative;
+        height: 100%;
+        img {
+            width: 100%;
+            @include breakpoint(1024px) {
+                position: absolute;
+                top: 0px;
+                left: -80px;
+                width: auto;
+                height: 100%;
             }
         }
     }
@@ -99,7 +120,10 @@ section {
     }
     .row-img {
         @media screen and (min-width: 1024px) {
-            height: 66.6%;
+            height: 66.6vh;
+        }
+        .row, .container {
+            height: 100%;
         }
     }
     .row-txt {
@@ -119,6 +143,18 @@ section {
                     }
                 }
             }
+        }
+    }
+    .img-shadow {
+        position: relative;
+        &::before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            @include beforeafter('', block);
+            @include background-image(linear-gradient(top, rgba($black, 0) 0%, $black 100%));
         }
     }
     .btn-group {
@@ -176,7 +212,7 @@ section {
                 height: 25vw;
             }
             @media screen and (min-width: 1024px) {
-                height: 50%;
+                height: 33.3vh; // 66.6vh / 2
             }
             > span {
                 position: absolute;
@@ -224,5 +260,76 @@ section {
                 }
             } 
         }
+    }
+}
+
+@import "_number";
+@import "_jumbotron";
+.slider-product {
+    .slick-slide > span {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 30px;
+        color: $white;
+        @include background-image(linear-gradient(top, rgba($black, 0) 0%, $black 100%));
+        z-index: 1;
+    }
+}
+.map-group {
+    background-color: $gray;
+    .map-img {
+        position: relative;
+        height: 100%;
+        > .row {
+            height: 100%;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .map-text {
+        @include breakpoint (1280px) {
+            padding-right: calc(((100% - 1200px) / 2) + 20px) !important;
+        }
+        @include breakpoint (1440px) {
+            padding-right: calc(((100% - 1410px) / 2) + 20px) !important;
+        }
+    }
+    .contact-list {
+        @include listreset(0, 0, none);
+        li {
+            font-size: 0;
+            +li {
+                margin-top: 1rem;
+            }
+            >div {
+                display: inline-block;
+                vertical-align: text-top;
+                font-size: 1rem;
+                line-height: 1.2;
+            }
+            .list-title {
+                padding-right: 10px;
+                margin-right: 10px;
+                border-right: 1px solid $text;
+            }
+            .list-content {
+                width: calc(100% - 55px);
+                a {
+                    color: $text;
+                    &:hover, &:active, &.active, &:focus {
+                        color: $primary;
+                    }    
+                }
+            }
+        }
+    }
+}
+.interest-section {
+    a.btn {
+        background-color: transparent;
     }
 }

@@ -11,6 +11,9 @@ body {
 	@media screen and (min-width: 1024px) {
 		font-family: "Roboto", "Noto Sans TC", Arial, "微軟正黑體", "繁黑體", "Microsoft JhengHei", "Microsoft YaHei", "Heiti TC", "LiHei Pro", "新細明體", "PMingLiU", sans-serif;
 	}
+	@include breakpoint(max-width 1023px) {
+		padding-bottom: 67px;
+    }
 	&.opened {
 		overflow: hidden;
 	}

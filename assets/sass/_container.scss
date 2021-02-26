@@ -12,8 +12,11 @@
         padding-left: 60px;
         padding-right: 60px;
     }
+    @include breakpoint (1280px) {
+        width: 1200px;
+    }
     @include breakpoint (1440px) {
-        width: 1410px;
+        width: $container;
     }
 }
 .row {

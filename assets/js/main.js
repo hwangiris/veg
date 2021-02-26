@@ -19,6 +19,8 @@ $(function () {
 			$('.hamburger').toggleClass("active");
 			$("nav").animate({ width: "toggle" }, 500);
 		});
+	} else {
+		$('.jumbotron-product .col-op-img').height($('.jumbotron-product .col-op-txt').outerHeight());
 	}
 	$('a.smooth-scroll[href*="#"]:not([href="#"])').on("click", function() {
 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -57,6 +59,24 @@ $(function () {
 		$(this).parent().parent().parent().parent().siblings().children('.product-body').children('.product-center').children('p').slideUp();
 		$(this).parent().parent().parent().parent().siblings().children('.product-body').children('.product-bottom').slideUp();
 	})
+    $('.slider-opening').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        prevArrow: "<button type='button' class='slick-navi slick-prev'><i class='icon icon-chevron-left'></i></button>",
+        nextArrow: "<button type='button' class='slick-navi slick-next'><i class='icon icon-chevron-left'></i></button>"
+    });
+    $('.slider-product').slick({
+        infinite: false,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        prevArrow: "<button type='button' class='slick-navi slick-prev'><i class='icon icon-chevron-left'></i></button>",
+        nextArrow: "<button type='button' class='slick-navi slick-next'><i class='icon icon-chevron-left'></i></button>"
+    });
 	$(window).resize(function () {});
 	$(window).scroll(function () {
 		var scroll = $(this).scrollTop(),

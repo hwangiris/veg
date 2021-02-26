@@ -1,108 +1,64 @@
-$icomoon-font-family:"veg" !default;
-$icomoon-font-path:"../fonts" !default;
+$icomoon-font-family: "veg" !default;
+$icomoon-font-path: "../fonts" !default;
 
-$icon-chevron-left:"\e909";
-$icon-play_arrow:"\e901";
-$icon-scroll:"\e90a";
-$icon-close:"\e902";
-$icon-facebook:"\e903";
-$icon-line:"\e904";
-$icon-mail:"\e905";
-$icon-map:"\e906";
-$icon-phone:"\e907";
-$icon-search:"\e908";
-$icon-logo:"\e900";
+$icon-phone: "\f095";
+$icon-chevron-left: "\e909";
+$icon-scroll: "\e90a";
+$icon-twitter: "\e904";
+$icon-line: "\e902";
+$icon-fb: "\e903";
 
 @font-face {
-    font-family: '#{$icomoon-font-family}';
-    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?yolxyp');
-    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?yolxyp#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?yolxyp') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?yolxyp') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?yolxyp##{$icomoon-font-family}') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
+	font-family: '#{$icomoon-font-family}';
+	src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?dy5zv3');
+	src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?dy5zv3#iefix') format('embedded-opentype'), url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?dy5zv3') format('truetype'), url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?dy5zv3') format('woff'), url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?dy5zv3##{$icomoon-font-family}') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
 }
+	
+[class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: '#{$icomoon-font-family}' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
 
-[class^="icon-"],
-[class*=" icon-"] {
-    font-family: '#{$icomoon-font-family}' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.icon-scroll {
-    &:before {
-      content: $icon-scroll; 
-    }
-  }
-  
-.icon-headphones:before {
-    content:"\e900";
-}
-
-.icon-chevron-left {
-    &:before {
-        content: $icon-chevron-left;
-    }
-}
-
-.icon-play_arrow {
-    &:before {
-        content: $icon-play_arrow;
-    }
-}
-
-.icon-close {
-    &:before {
-        content: $icon-close;
-    }
-}
-
-.icon-facebook {
-    &:before {
-        content: $icon-facebook;
-    }
-}
-
-.icon-line {
-    &:before {
-        content: $icon-line;
-    }
-}
-
-.icon-mail {
-    &:before {
-        content: $icon-mail;
-    }
-}
-
-.icon-map {
-    &:before {
-        content: $icon-map;
-    }
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .icon-phone {
-    &:before {
-        content: $icon-phone;
-    }
+	&:before {
+		content: $icon-phone; 
+	}
 }
-
-.icon-search {
-    &:before {
-        content: $icon-search;
-    }
+.icon-chevron-left {
+	&:before {
+		content: $icon-chevron-left; 
+	}
 }
-
-.icon-logo {
-    &:before {
-        content: $icon-logo;
-    }
+.icon-scroll {
+	&:before {
+		content: $icon-scroll; 
+	}
+}
+.icon-twitter {
+	&:before {
+		content: $icon-twitter; 
+	}
+}
+.icon-line {
+	&:before {
+		content: $icon-line; 
+	}
+}
+.icon-fb {
+	&:before {
+		content: $icon-fb; 
+	}
 }

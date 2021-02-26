@@ -1,8 +1,52 @@
 footer {
-    color: $white;
     font-size: 0.875rem;
+    background-image: url('../images/bg-left.png');
+    background-position: top left;
+    background-repeat: no-repeat;
     background-color: $gray;
-    span {
-        display: inline-block;
+    > .container-fluid:first-child {
+        background-image: url('../images/bg-right.png');
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    ul {
+        @include listreset(0, 0, none);
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            > a {
+                display: block;
+                > * {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+    i {
+        &.icon-line {
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            text-align: center;
+            background-color: $green;
+            @include border-radius(50%);
+            &::before {
+                display: block;
+                padding-top: .175rem;
+                font-size: 0.875rem;
+                line-height: 1.2rem;
+            }
+        }
+        &.icon-phone {
+            font-size: 1.25rem;
+        }
+    }
+    b {
+        letter-spacing: 0.4em;
     }
 }

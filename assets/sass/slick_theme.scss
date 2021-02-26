@@ -1,0 +1,127 @@
+@charset"UTF-8";
+@import"Compass";
+@import"breakpoint";
+// 元件
+@import"_variable";
+@import"_mixin";
+.slick-slide {
+    img {
+        width: 100%;
+    }
+}
+
+.slick-dots {
+    @include listreset(10px 0 0, 0, none);
+    font-size: 0;
+    text-align: center;
+    li {
+        display: inline-block;
+        &.slick-active button::before {
+            @include opacity(1);
+        }
+    }
+    button {
+        position: relative;
+        display: block;
+        width: 16px;
+        height: 16px;
+        color: transparent;
+        font-size: 0;
+        line-height: 0;
+        border: 0;
+        background: transparent;
+        outline: none;
+        &::before {
+            @include beforeafter('', block);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include translate(-50%, -50%);
+            @include transition(opacity 0.3s);
+            cursor: pointer;
+        }
+    }
+}
+
+.slick-navi {
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    color: $white;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    z-index: 1;
+    &.slick-disabled {
+        display: none !important;
+    }
+    i.icon {
+        display: block;
+        font-size: 30px;
+        line-height: 1;
+        text-shadow: 0 0 5px rgba($black, 0.5), 0 0 10px rgba($black, 0.5);
+    }
+}
+
+.slick-prev {
+    left: 0;
+    @include transform(translateY(-50%) rotate(180deg));
+}
+
+.slick-next {
+    right: 0;
+    @include translateY(-50%);
+}
+
+.slider-instagram {
+    .slick-dots {
+        button {
+            padding: 4px;
+            &::before {
+                width: 8px;
+                height: 8px;
+                background-color: $white;
+                @include opacity(0.25);
+                @include border-radius(50%);
+            }
+            &:hover::before {
+                @include opacity(0.5);
+            }
+        }
+    }
+}
+
+.slider-guest {
+    .slick-dots {
+        li {
+            button {
+                width: 12px;
+                padding: 2px;
+                @include transition(width 0.3s);
+                &::before {
+                    width: 8px;
+                    height: 4px;
+                    background-color: $white;
+                    @include opacity(0.75);
+                    @include border-radius(4px);
+                    @include transition(width 0.3s);
+                }
+                &:hover::before {
+                    @include opacity(1);
+                }
+            }
+            &.slick-active {
+                button {
+                    width: 24px;
+                    &::before {
+                        width: 20px;
+                        background-color: $dark;
+                    }
+                    &:hover::before {
+                        background-color: darken($dark, 15%);
+                    }
+                }
+            }
+        }
+    }
+}

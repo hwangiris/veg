@@ -1,0 +1,101 @@
+.jumbotron {
+    position: relative;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    z-index: 0;
+    @media screen and (orientation: portrait) {
+        min-height: 120vw;
+    }
+    &.jumbotron-product{
+        background-color: #a1dbff;
+        @include filter-gradient(#a1dbff, $white, vertical);
+        @include background-image(linear-gradient(top, #a1dbff 0%, $white 100%));
+    }
+    &::before {
+        @include beforeafter('', block);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include opacity(0.6);
+        z-index: 1;
+    }
+    >img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .container-fluid .col-op-txt, .container {
+        position: relative;
+        padding-top: 38.5vw;
+        z-index: 2;
+        @include breakpoint(768px) {
+            padding-top: 200px;
+        }
+        @include breakpoint(1200px) {
+            padding-top: 250px;
+            padding-bottom: 250px;
+        }
+    }
+    .container-fluid .col-op-img img {
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+    .container {
+        color: $white;
+        padding-bottom: 38.5vw;
+        @include breakpoint(768px) {
+            padding-bottom: 200px;
+        }
+        &.has-btn {
+            padding-bottom: 28.5vw;
+            @include breakpoint(768px) {
+                padding-bottom: 150px;
+            }
+            @include breakpoint(1200px) {
+                padding-bottom: 200px;
+            }
+        }
+        >a.blank-link {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 100vw;
+            @include translateX(-50%);
+        }
+    }
+    h1 {
+        font-size: 28px;
+        font-weight: 300;
+    }
+    ul.breadcrumbs {
+        position: relative;
+        @include listreset(20px 0 0, 0, none);
+        font-size: 0;
+        z-index: 2;
+        li {
+            display: inline-block;
+            font-size: 1rem;
+            +li::before {
+                @include beforeafter('/', inline-block);
+                padding-left: 0.25em;
+                padding-right: 0.25em;
+            }
+            a {
+                color: $white;
+                &.active {
+                    color: $primary;
+                }
+                &:hover, &:active, &.active, &:focus {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
