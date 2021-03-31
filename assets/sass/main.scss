@@ -96,21 +96,6 @@ section {
             object-fit: cover;
         }
     }
-    .col-img {
-        > .label {
-            position: absolute;
-            left: 0;
-            bottom: 80px;
-            background-color: rgba($green, 0.6);
-            @media screen and (max-width: 1023px) {
-                width: 80%;
-                font-size: $h4 !important;
-            }
-            @media screen and (max-width: 767px) {
-                font-size: $h5 !important;
-            }
-        }
-    }
     .col-txt {
         flex-wrap: wrap;
         flex-direction: column;
@@ -125,6 +110,19 @@ section {
         }
         .row, .container {
             height: 100%;
+            &.py-40 {
+                align-content: flex-end;
+            }
+        }
+        .label {
+            background-color: rgba($green, 0.6);
+            @media screen and (max-width: 1023px) {
+                width: 80%;
+                font-size: $h4 !important;
+            }
+            @media screen and (max-width: 767px) {
+                font-size: $h5 !important;
+            }
         }
     }
     .row-txt {
@@ -341,5 +339,5 @@ section {
 }
 
 * {
-    opacity: 0.8 !important;
+    // opacity: 0.8 !important;
 }
