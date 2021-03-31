@@ -4,7 +4,8 @@
     left: 0;
     right: 0;
     padding: 15px;
-    background-color: $gray;
+    color: $white;
+    background-color: $green;
     z-index: 5;
     @include breakpoint(1024px) {
         display: none;
@@ -17,7 +18,7 @@
         margin-right: 1em;
     }
     a.btn {
-        @include button($black, $green);
+        @include button($white, $green);
         min-width: auto;
         padding: 0 7px;
         vertical-align: middle;
@@ -26,8 +27,8 @@
             min-width: auto;
         }
         &:hover, &:active, &.active, &:focus {
-            color: $white;
-            background-color: $black;        
+            color: $green;
+            background-color: $white;        
         }
         i.icon {
             display: block;

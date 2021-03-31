@@ -60,31 +60,66 @@
                 </div>
             </div>
         </header>
-        <section id="section-opening" class="section section-opening">
-            <div class="slider-opening">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-xl-6 col-md-7 col-op-txt text-center">
-                            <div class="row">
-                                <div class="col-xl-1"></div>
-                                <div class="col-xl-11">
-                                    <div class="main-title wow fadeInUp line-height-1125 font-weight-600">
-                                        <span class="display-inline-block">生鮮蔬果</span><span class="display-inline-block">配送的行家</span>
+        <section id="section-buy" class="section section-buy">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="row-img img-shadow col-12 px-0">
+                        <img src="assets/images/car.jpg" alt="">
+                        <div class="row mx-0 img-shadow">
+                            <div class="container">
+                                <div class="row number-group img-shadow py-40">
+                                    <div class="col-md-3 col-xs-4 col-5 px-md-20 px-15 number-item wow fadeInUp">
+                                        天天  <span class="count"><span class="count-group count-group-5"><i>0</i><i>1</i><i>7</i><i>13</i><i>18</i><i>20</i><i>24</i></span></span>小時<br>線上服務</div>
+                                    <div class="col-md-3 col-xs-4 col-5 px-md-20 px-15 number-item wow fadeInUp" data-wow-delay="0.1s">
+                                        超過  <span class="count"><span class="count-group count-group-5"><i>1</i><i>17</i><i>24</i><i>43</i><i>56</i><i>79</i><i>95</i></span></span>％<br>客戶滿意
                                     </div>
-                                    <div class="wow fadeInUp h2 mt-md-60 mb-md-80 mt-30 mb-40 line-height-1125 font-weight-600 color-green" data-wow-delay="0.3s">
-                                        <span class="display-inline-block mx-10">產地直銷</span><span class="display-inline-block mx-10">24小時接單</span><span class="display-inline-block mx-10">免費配送</span></div>
-                                    <div class="wow fadeInUp h3 my-0 font-weight-300 line-height-1125 color-dark" data-wow-delay="0.6s">品質．公道．安心</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-md-5 px-0 col-op-img wow fadeIn">
-                            <img src="assets/images/op-img.jpg" alt="">
+                    </div>
+                    <div class="row-txt col-12 py-40 px-xs-40">
+                        <div class="row">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-4 col-12">
+                                        <div class="title wow fadeInUp">
+                                            <h2 class="h1 my-0 font-weight-500 line-height-1125">訂購說明</h2>
+                                            <h4 class="h3 my-0 font-weight-100 line-height-1125">How to Buy</h4>
+                                            <div class="btn-group display-flex mt-md-60 pt-md-0 pt-20">
+                                                <a href="tel:+0900168308" target="_blank" rel="noopener noreferrer" class="btn btn-green">電話訂購</a>
+                                                <a href="https://line.me/ti/p/FlHceIq7py" target="_blank" rel="noopener noreferrer" class="btn btn-green ml-20">LINE訂購</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-sm-8 col-12 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="content">
+                                            <p class="h6 my-0 line-height-2000">
+                                                寶慶蔬果行秉持客戶服務精神，提供當日最新鮮及最多樣的生鮮食材，專業蔬果配送，讓您買的安心。我們提供蔬果食材報價詢問，歡迎24小時來電。
+                                            </p>
+                                            <ul class="contact">
+                                                <li class="mt-10 wow fadeInUp" data-wow-delay="0.5s">
+                                                    <a href="tel:+0900168308">
+                                                        <i class="icon icon-phone color-dark"></i>
+                                                        <span class="h6 color-dark mx-10 my-0">電話</span>
+                                                        <span class="h5 color-black my-0">0900168308</span>
+                                                    </a>
+                                                </li>
+                                                <li class="mt-10 wow fadeInUp" data-wow-delay="0.6s">
+                                                    <a href="#!">
+                                                        <i class="icon icon-line color-white"></i>
+                                                        <span class="h6 color-dark mx-10 my-0">LINE</span>
+                                                        <span class="h5 color-black my-0">加入好友立即諮詢</span>
+                                                    </a>
+                                                </li>
+                                            </ul>                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="#service" class="icon icon-scroll desktop" id="scroll"></a>
-            <a href="#section-service" class="icon icon-scroll mobile" id="scroll"></a>
         </section>
         <section id="section-product" class="section section-product">
             <div class="container-fluid">
@@ -222,11 +257,11 @@
             </footer>
         </section>
     </main>
-    <a href="#opening" class="gotop desktop display-none smooth-scroll" id="top">
+    <a href="#buy" class="gotop desktop display-none smooth-scroll" id="top">
         <span class="serif">top</span>
         <i class="icon icon-chevron-left"></i>
     </a>
-    <a href="#section-opening" class="gotop mobile smooth-scroll" id="top">
+    <a href="#section-buy" class="gotop mobile smooth-scroll" id="top">
         <span class="serif">top</span>
         <i class="icon icon-chevron-left"></i>
     </a>
@@ -252,7 +287,7 @@
             var width = $(window).width();
             if (width >= 1024) {
                 $('#fullpage').fullpage({
-                    anchors: ['opening', 'product'],
+                    anchors: ['buy', 'product'],
                     onLeave: function(index, nextIndex, direction){        
                         if (nextIndex >= 2){
                             $("a.gotop").fadeIn();

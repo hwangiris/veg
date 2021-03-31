@@ -60,31 +60,54 @@
                 </div>
             </div>
         </header>
-        <section id="section-opening" class="section section-opening">
-            <div class="slider-opening">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-xl-6 col-md-7 col-op-txt text-center">
-                            <div class="row">
-                                <div class="col-xl-1"></div>
-                                <div class="col-xl-11">
-                                    <div class="main-title wow fadeInUp line-height-1125 font-weight-600">
-                                        <span class="display-inline-block">生鮮蔬果</span><span class="display-inline-block">配送的行家</span>
+        <section id="section-about" class="section section-about">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="row-img img-shadow col-12 px-0">
+                        <img src="assets/images/about.jpg" alt="">
+                        <div class="row mx-0 img-shadow">
+                            <div class="container">
+                                <div class="row number-group py-40">
+                                    <div class="number-item px-md-20 px-10 col-4 wow fadeInUp">
+                                        達  <span class="count"><span class="count-group text-center count-group-5"><i>30</i><i>72</i><i>96</i><i>121</i><i>168</i><i>200</i><i>286</i></span></span><sup>＋</sup>種<br>鮮肉蔬果海鮮
                                     </div>
-                                    <div class="wow fadeInUp h2 mt-md-60 mb-md-80 mt-30 mb-40 line-height-1125 font-weight-600 color-green" data-wow-delay="0.3s">
-                                        <span class="display-inline-block mx-10">產地直銷</span><span class="display-inline-block mx-10">24小時接單</span><span class="display-inline-block mx-10">免費配送</span></div>
-                                    <div class="wow fadeInUp h3 my-0 font-weight-300 line-height-1125 color-dark" data-wow-delay="0.6s">品質．公道．安心</div>
+                                    <div class="number-item px-md-20 px-0 col-4 wow fadeInUp" data-wow-delay="0.1s">
+                                        客戶有  <span class="count"><span class="count-group text-center count-group-5"><i>20</i><i>46</i><i>66</i><i>83</i><i>96</i><i>100</i><i>108</i></span></span><sup>＋</sup>家<br>涵蓋連鎖餐廳、學校等
+                                    </div>
+                                    <div class="number-item px-md-20 px-10 col-4 wow fadeInUp" data-wow-delay="0.2s">
+                                        具  <span class="count"><span class="count-group text-center count-group-5"><i>1</i><i>5</i><i>10</i><i>15</i><i>25</i><i>35</i><i>45</i></span></span><sup>＋</sup>年<br>菜商批發經驗
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-md-5 px-0 col-op-img wow fadeIn">
-                            <img src="assets/images/op-img.jpg" alt="">
+                    </div>
+                    <div class="row-txt col-12 py-40 px-xs-40">
+                        <div class="row">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-4 col-12">
+                                        <div class="title wow fadeInUp">
+                                            <h2 class="h1 my-0 font-weight-500 line-height-1125">關於寶慶<span class="color-green">蔬果</span>行</h2>
+                                            <h4 class="h3 my-0 font-weight-100 line-height-1125">About us</h4>
+                                            <div class="btn-group display-flex mt-md-60 pt-md-0 pt-20">
+                                                <a href="products.html" class="btn btn-green">了解更多</a>
+                                                <a href="contact.html" class="btn btn-green ml-20">立即諮詢</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-sm-8 col-12 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="content">
+                                            <p class="h6 my-0 line-height-2000">
+                                                寶慶蔬果行有別於一般菜商，集產地、行口、菜商角色於一身，是少數能夠直接供應給各大蔬果配送行的業者代為包裝理貨，寶慶蔬果行由第一代創始人洪先生，台北社子發跡，務農起家、產地自產自銷。由於當時的時空環境交通建設、運輸南北並不甚發達，台北社子可說是當時大台北產區，專供北台灣蔬果使用。當時台北農產運銷尚未成立，隨著時間演變時至今日，產量減少改自目前南部產地直接專人種植、專人採買、產銷一條龍，時至今日也有著 4、50 年累積的經驗。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="#service" class="icon icon-scroll desktop" id="scroll"></a>
-            <a href="#section-service" class="icon icon-scroll mobile" id="scroll"></a>
         </section>
         <section id="section-product" class="section section-product">
             <div class="container-fluid">
@@ -222,11 +245,11 @@
             </footer>
         </section>
     </main>
-    <a href="#opening" class="gotop desktop display-none smooth-scroll" id="top">
+    <a href="#about" class="gotop desktop display-none smooth-scroll" id="top">
         <span class="serif">top</span>
         <i class="icon icon-chevron-left"></i>
     </a>
-    <a href="#section-opening" class="gotop mobile smooth-scroll" id="top">
+    <a href="#section-about" class="gotop mobile smooth-scroll" id="top">
         <span class="serif">top</span>
         <i class="icon icon-chevron-left"></i>
     </a>
@@ -252,7 +275,7 @@
             var width = $(window).width();
             if (width >= 1024) {
                 $('#fullpage').fullpage({
-                    anchors: ['opening', 'product'],
+                    anchors: ['about', 'product'],
                     onLeave: function(index, nextIndex, direction){        
                         if (nextIndex >= 2){
                             $("a.gotop").fadeIn();

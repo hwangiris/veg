@@ -5530,7 +5530,8 @@ footer b {
   left: 0;
   right: 0;
   padding: 15px;
-  background-color: #f8f8f8;
+  color: #fff;
+  background-color: #00b504;
   z-index: 5;
 }
 @media (min-width: 1024px) {
@@ -5548,12 +5549,12 @@ footer b {
 .crosscut-block a.btn {
   display: inline-block;
   min-width: 140px;
-  color: #171b17;
+  color: #fff;
   font-size: 0.875rem;
   line-height: 2.5;
   text-align: center;
   background-color: transparent;
-  border: 1px solid #171b17;
+  border: 1px solid #fff;
   cursor: pointer;
   min-width: auto;
   padding: 0 7px;
@@ -5564,7 +5565,7 @@ footer b {
 }
 .crosscut-block a.btn:hover, .crosscut-block a.btn:active, .crosscut-block a.btn.active, .crosscut-block a.btn:focus {
   color: #00b504;
-  background-color: #171b17;
+  background-color: #fff;
 }
 @media (min-width: 1024px) {
   .crosscut-block a.btn {
@@ -5577,8 +5578,8 @@ footer b {
   }
 }
 .crosscut-block a.btn:hover, .crosscut-block a.btn:active, .crosscut-block a.btn.active, .crosscut-block a.btn:focus {
-  color: #fff;
-  background-color: #171b17;
+  color: #00b504;
+  background-color: #fff;
 }
 .crosscut-block a.btn i.icon {
   display: block;
@@ -6618,6 +6619,10 @@ section .grid-group .grid-item:hover > span.grid-hover {
 
 .interest-section a.btn {
   background-color: transparent;
+}
+
+* {
+  opacity: 0.8 !important;
 }
 
 /*# sourceMappingURL=main.css.map */
