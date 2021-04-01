@@ -1,6 +1,8 @@
 .jumbotron {
     position: relative;
     display: block;
+	min-height: auto;
+	height: auto;
     text-align: center;
     overflow: hidden;
     z-index: 0;

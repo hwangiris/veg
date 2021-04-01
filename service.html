@@ -31,21 +31,14 @@
                         寶慶<span class="color-green">蔬果</span>行
                     </a>
                     <nav>
-                        <ul class="desktop">
+                        <ul>
                             <li><a class="smooth-scroll" href="index.html#opening">首頁</a></li>
                             <li><a class="smooth-scroll" href="about.html">關於我們</a></li>
                             <li><a class="smooth-scroll" href="products.html">產品專區</a></li>
                             <li><a class="smooth-scroll" href="service.html">服務項目</a></li>
                             <li><a class="smooth-scroll" href="buy.html">訂購說明</a></li>
                             <li><a class="smooth-scroll" href="contact.html">聯絡我們</a></li>
-                        </ul>
-                        <ul class="mobile">
-                            <li><a class="smooth-scroll" href="index.html#section-opening">首頁</a></li>
-                            <li><a class="smooth-scroll" href="about.html">關於我們</a></li>
-                            <li><a class="smooth-scroll" href="products.html">產品專區</a></li>
-                            <li><a class="smooth-scroll" href="service.html">服務項目</a></li>
-                            <li><a class="smooth-scroll" href="buy.html">訂購說明</a></li>
-                            <li><a class="smooth-scroll" href="contact.html">聯絡我們</a></li>
+                            <li><a class="smooth-scroll" href="#!" target="_blank" rel="noopener noreferrer"><i class="icon icon-lian-shu"></i><span>&nbsp;粉絲團</span></a></li>
                         </ul>
                         <a class="line-btn display-flex py-10 px-20" href="https://line.me/ti/p/FlHceIq7py" target="_blank" rel="noopener noreferrer">
                             <i class="icon icon-line color-white my-0"></i>
@@ -60,7 +53,7 @@
                 </div>
             </div>
         </header>
-        <section id="section-service" class="section section-service">
+        <section id="service" class="section section-service">
             <div class="container-fluid">
                 <div class="row">
                     <div class="row-img img-shadow col-12 px-0">
@@ -111,7 +104,7 @@
                 </div>
             </div>
         </section>
-        <section id="section-product" class="section section-product">
+        <section id="product" class="section section-product">
             <div class="container-fluid">
                 <div class="row">
                     <div class="grid-group row-img col-12">
@@ -267,28 +260,8 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/vendors/scrolloverflow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        $(function() {
-            var width = $(window).width();
-            if (width >= 1024) {
-                $('#fullpage').fullpage({
-                    anchors: ['service', 'product'],
-                    onLeave: function(index, nextIndex, direction){        
-                        if (nextIndex >= 2){
-                            $("a.gotop").fadeIn();
-                        } else {
-                            $("a.gotop").fadeOut(100);
-                        }
-                    },
-                    scrollOverflow: true,
-                });
-            }
-        });
-    </script>
 </body>
 </html>

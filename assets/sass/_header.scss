@@ -34,6 +34,7 @@ header {
         display: block;
         font-size: $h3;
         letter-spacing: 0.225em;
+        width: calc( (#{$h3} + 0.3em) * 5);
     }
 }
 
@@ -92,6 +93,9 @@ nav {
         @include listreset(0 auto, 0, none);
         font-size: 0;
         @media screen and (min-width: 1200px) {
+            margin-right: 30px;
+        }
+        @media screen and (min-width: 1440px) {
             margin-right: 50px;
         }
         @media screen and (max-width: 1199px) {
@@ -108,10 +112,13 @@ nav {
             a {
                 position: relative;
                 display: block;
-                padding: 10px;
+                padding: 10px 5px;
                 color: $black;
                 font-size: $h5;
                 line-height: 1;
+                @media screen and (min-width: 1440px) {
+                    padding: 10px 8px;
+                }
                 &::before {
                     @include beforeafter('', block);
                     position: absolute;
@@ -133,13 +140,20 @@ nav {
                         @include transition(all 0.3s);
                     }
                 }
+                > * {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
             }
             + li {
                 @media screen and (max-width: 1023px) {
                     border-top: 1px solid rgba($gray, 0.15);
                 }
                 @media screen and (min-width: 1024px) {
-                    margin-left: 30px;
+                    margin-left: 10px;
+                }
+                @media screen and (min-width: 1440px) {
+                    margin-left: 20px;
                 }
             }
         }

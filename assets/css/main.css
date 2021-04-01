@@ -5149,7 +5149,7 @@ h6, .h6 {
   content: "";
 }
 
-.icon-fb:before {
+.icon-fb:before, .icon-lian-shu:before {
   content: "";
 }
 
@@ -5245,6 +5245,7 @@ header a.logo {
   display: block;
   font-size: 2.25rem;
   letter-spacing: 0.225em;
+  width: calc( (2.25rem + 0.3em) * 5);
 }
 
 .hamburger {
@@ -5318,6 +5319,11 @@ nav ul {
 }
 @media screen and (min-width: 1200px) {
   nav ul {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  nav ul {
     margin-right: 50px;
   }
 }
@@ -5342,10 +5348,15 @@ nav ul li {
 nav ul li a {
   position: relative;
   display: block;
-  padding: 10px;
+  padding: 10px 5px;
   color: #171b17;
   font-size: 1.25rem;
   line-height: 1;
+}
+@media screen and (min-width: 1440px) {
+  nav ul li a {
+    padding: 10px 8px;
+  }
 }
 nav ul li a::before {
   content: "";
@@ -5375,6 +5386,10 @@ nav ul li a:hover::before {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+nav ul li a > * {
+  display: inline-block;
+  vertical-align: middle;
+}
 @media screen and (max-width: 1023px) {
   nav ul li + li {
     border-top: 1px solid rgba(248, 248, 248, 0.15);
@@ -5382,7 +5397,12 @@ nav ul li a:hover::before {
 }
 @media screen and (min-width: 1024px) {
   nav ul li + li {
-    margin-left: 30px;
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  nav ul li + li {
+    margin-left: 20px;
   }
 }
 
@@ -6416,6 +6436,8 @@ section .grid-group .grid-item:hover > span.grid-hover {
 .jumbotron {
   position: relative;
   display: block;
+  min-height: auto;
+  height: auto;
   text-align: center;
   overflow: hidden;
   z-index: 0;
@@ -6619,6 +6641,15 @@ section .grid-group .grid-item:hover > span.grid-hover {
 
 .interest-section a.btn {
   background-color: transparent;
+}
+
+.index-page section {
+  min-height: 100vh;
+  height: 100vh;
+}
+
+* {
+  opacity: 0.8 !important;
 }
 
 /*# sourceMappingURL=main.css.map */
