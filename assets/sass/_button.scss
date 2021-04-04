@@ -26,4 +26,15 @@ a.btn {
             background-color: $green;
         }
     }
+    &.btn-contained {
+        &.btn-green {
+            color: $white;
+            border-color: $green;
+            background-color: $green;
+            &:hover {
+                color: $white;
+                background-color: $primary-variant;
+            }
+        }
+    }
 }

@@ -185,6 +185,8 @@ th {
 
 body {
   position: relative;
+  height: 100%;
+  min-height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
@@ -4984,7 +4986,7 @@ h4, .h4 {
 h5, .h5 {
   margin-top: 1em;
   margin-bottom: 1em;
-  font-size: 1rem !important;
+  font-size: 1.125rem !important;
 }
 @media screen and (min-width: 1200px) {
   h5, .h5 {
@@ -4995,11 +4997,11 @@ h5, .h5 {
 h6, .h6 {
   margin-top: 1em;
   margin-bottom: 1em;
-  font-size: 0.9375rem !important;
+  font-size: 1rem !important;
 }
 @media screen and (min-width: 1200px) {
   h6, .h6 {
-    font-size: 1rem !important;
+    font-size: 1.125rem !important;
   }
 }
 
@@ -5188,6 +5190,15 @@ a.btn.btn-green:hover {
   color: #fff;
   background-color: #00b504;
 }
+a.btn.btn-contained.btn-green {
+  color: #fff;
+  border-color: #00b504;
+  background-color: #00b504;
+}
+a.btn.btn-contained.btn-green:hover {
+  color: #fff;
+  background-color: #009c03;
+}
 
 .embed {
   position: relative;
@@ -5208,15 +5219,14 @@ a.btn.btn-green:hover {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 4.75rem;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  background-color: rgba(255, 255, 255, 0.975);
-  backdrop-filter: blur(5px);
+  background-color: #fff;
   z-index: 6;
 }
 @media screen and (min-width: 1200px) {
@@ -5690,11 +5700,32 @@ section .row.align-items-center {
     animation-name: fadeIn !important;
   }
 }
+section.section-first {
+  padding-top: 4.75rem;
+}
+@media screen and (min-width: 1200px) {
+  section.section-first {
+    padding-top: 5.55rem;
+  }
+}
+section.list-section {
+  min-height: auto;
+  height: auto;
+}
 section .slider-opening {
   height: 100%;
 }
 section .slider-opening .slick-list, section .slider-opening .slick-track, section .slider-opening .slick-slide {
   height: 100%;
+}
+@media (min-width: 1024px) {
+  section .slider-opening .slick-slide img {
+    position: absolute;
+    top: 0;
+    left: -80px;
+    width: auto;
+    height: 100%;
+  }
 }
 section .slider-opening .main-title {
   font-size: 3.5rem;
@@ -5704,13 +5735,37 @@ section .slider-opening .main-title {
     font-size: 5.25rem;
   }
 }
+section .slider-inpage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+section .slider-inpage .slick-list, section .slider-inpage .slick-track {
+  height: 100%;
+}
+section .slider-inpage .slick-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 section .col-op-txt {
   position: relative;
   z-index: 1;
 }
+@media (min-width: 1024px) {
+  section .col-op-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}
 @media (max-width: 1023px) {
   section .col-op-txt {
-    padding-top: 120px;
+    padding-top: 30px;
   }
 }
 section .col-op-img {
@@ -5755,7 +5810,7 @@ section .col-txt > * {
 }
 @media screen and (min-width: 1024px) {
   section .row-img {
-    height: 66.6vh;
+    min-height: 66.6%;
   }
 }
 section .row-img .row, section .row-img .container {
@@ -5779,7 +5834,7 @@ section .row-img .label {
   }
 }
 section .row-txt {
-  height: 33.4%;
+  min-height: 33.4%;
 }
 @media screen and (max-width: 1023px) {
   section .row-txt > .row > .container > .row {
@@ -6641,15 +6696,6 @@ section .grid-group .grid-item:hover > span.grid-hover {
 
 .interest-section a.btn {
   background-color: transparent;
-}
-
-.index-page section {
-  min-height: 100vh;
-  height: 100vh;
-}
-
-* {
-  opacity: 0.8 !important;
 }
 
 /*# sourceMappingURL=main.css.map */
