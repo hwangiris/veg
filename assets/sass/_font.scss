@@ -1,12 +1,14 @@
 $icomoon-font-family: "veg" !default;
 $icomoon-font-path: "../fonts" !default;
 
-$icon-phone: "\f095";
-$icon-chevron-left: "\e909";
-$icon-scroll: "\e90a";
-$icon-twitter: "\e904";
+$icon-taiwan: "\e901";
+$icon-shop: "\e900";
 $icon-line: "\e902";
 $icon-fb: "\e903";
+$icon-twitter: "\e904";
+$icon-chevron-left: "\e909";
+$icon-scroll: "\e90a";
+$icon-phone: "\f095";
 
 @font-face {
 	font-family: '#{$icomoon-font-family}';
@@ -32,6 +34,16 @@ $icon-fb: "\e903";
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-taiwan {
+	&:before {
+		content: $icon-taiwan; 
+	}
+}
+.icon-shop {
+	&:before {
+		content: $icon-shop; 
+	}
+}
 .icon-phone {
 	&:before {
 		content: $icon-phone; 

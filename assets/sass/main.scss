@@ -16,6 +16,7 @@
 section {
     position: relative;
     .container-fluid {
+        position: relative;
         height: 100%;
         > .row {
             height: 100%;
@@ -49,10 +50,10 @@ section {
             }
         }
     }
-    &.section-first {
-        padding-top: 4.75rem;
+    &.section-opening, &.section-first {
+        margin-top: 4.75rem;
         @media screen and (min-width: 1200px) {
-            padding-top: 5.55rem;
+            margin-top: 5.55rem;
         }
     }
     &.list-section {
@@ -60,23 +61,86 @@ section {
         height: auto;
     }
     .slider-opening {
-        height: 100%;
-        .slick-list, .slick-track, .slick-slide {
-            height: 100%;
+        width: 100%;
+        @media screen and (max-width: 1023px) {
+            min-height: 158vw;
         }
-        .slick-slide img {
-            @include breakpoint(min-width 1024px) {
-                position: absolute;
-                top: 0;
-                left: -80px;
-                width: auto;
-                height: 100%;
+        &.desktop {
+            @media screen and (max-width: 1023px) {
+                display: none;
+            }
+        }
+        &.mobile {
+            @media screen and (min-width: 1024px) {
+                display: none;
             }
         }
         .main-title {
             font-size: $h1;
             @media screen and (min-width: 1199px) {
                 font-size: $h0;
+            }
+        }
+    }
+    .feature-block {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        align-items: center;
+        justify-content: space-between;
+        .feature-item {
+            position: relative;
+            padding-left: 3rem;
+            @media screen and (min-width: 374px) {
+                padding-left: 3.5rem;
+            }
+            @media screen and (min-width: 1200px) {
+                padding-left: 4rem;
+            }
+            @media screen and (min-width: 1200px) {
+                padding-left: 4rem;
+            }
+            @media screen and (min-width: 1440px) {
+                font-size: 4.5rem;
+            }
+            i.icon {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                font-size: 2.5rem;
+                @include translateY(-50%);
+                @media screen and (min-width: 374px) {
+                    font-size: 3rem;
+                }
+                @media screen and (min-width: 1200px) {
+                    font-size: 3.5rem;
+                }
+                @media screen and (min-width: 1440px) {
+                    font-size: 3.85rem;
+                }
+            }
+            a {
+                color: $green;
+            }
+            .feature-title {
+                font-size: 1.325rem;
+                @media screen and (min-width: 374px) {
+                    font-size: 1.5rem;
+                }
+                @media screen and (min-width: 1200px) {
+                    font-size: 2rem;
+                }
+                @media screen and (min-width: 1440px) {
+                    font-size: 2.25rem;
+                }
+            }
+            .feature-sub {
+                font-size: 1rem;
+                @media screen and (min-width: 1200px) {
+                    font-size: 1.325rem;
+                }
+                @media screen and (min-width: 1440px) {
+                    font-size: 1.625rem;
+                }
             }
         }
     }
@@ -97,16 +161,19 @@ section {
         }
     }
     .col-op-txt {
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         z-index: 1;
         @include breakpoint(min-width 1024px) {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             height: 100%;
         }
         @include breakpoint(max-width 1023px) {
-            padding-top: 30px;
+            padding-top: 10px;
+            height: 81vw;
         }
     }
     .col-op-img {
@@ -125,7 +192,7 @@ section {
     }
     .col-img, .row-img {
         position: relative;
-        @media screen and (max-width: 1023px) {
+        @media screen and (max-width: 767px) {
             min-height: 66.7vh;
         }
         > img {
@@ -146,7 +213,7 @@ section {
         }
     }
     .row-img {
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 768px) {
             min-height: 66.6%;
         }
         .row, .container {

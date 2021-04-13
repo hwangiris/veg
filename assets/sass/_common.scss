@@ -16,6 +16,9 @@ body {
 	@include breakpoint(max-width 1023px) {
 		padding-bottom: 67px;
     }
+    @include breakpoint(max-width 374px) {
+		padding-bottom: 57px;
+    }
 	&.opened {
 		overflow: hidden;
 	}
