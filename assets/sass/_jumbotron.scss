@@ -7,7 +7,7 @@
     overflow: hidden;
     z-index: 0;
     @media screen and (orientation: portrait) {
-        min-height: 120vw;
+        // min-height: 120vw;
     }
     &.jumbotron-product{
         background-color: #a1dbff;
@@ -32,20 +32,35 @@
     }
     .container-fluid .col-op-txt, .container {
         position: relative;
-        padding-top: 38.5vw;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        height: auto;
         z-index: 2;
         @include breakpoint(768px) {
-            padding-top: 200px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        @include breakpoint(1024px) {
+            padding-top: 100px;
+            padding-bottom: 100px;
         }
         @include breakpoint(1200px) {
             padding-top: 250px;
             padding-bottom: 250px;
         }
     }
-    .container-fluid .col-op-img img {
-        top: 0;
-        left: 0;
-        height: 100%;
+    .container-fluid .col-op-img {
+        @media screen and (min-width: 1024px) {
+            position: absolute;
+            top: 0;
+            bottom: 0;        
+            right: 0;
+        }
+        img {
+            top: 0;
+            left: auto;
+            height: 100%;
+        }
     }
     .container {
         color: $white;

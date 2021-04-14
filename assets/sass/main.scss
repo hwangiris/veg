@@ -50,7 +50,7 @@ section {
             }
         }
     }
-    &.section-opening, &.section-first {
+    &.section-opening, &.section-first, &.jumbotron {
         margin-top: 4.75rem;
         @media screen and (min-width: 1200px) {
             margin-top: 5.55rem;
@@ -75,6 +75,9 @@ section {
                 display: none;
             }
         }
+        .slick-list, .slick-track, .slick-slide {
+            height: 100%;
+        }
         .main-title {
             font-size: $h1;
             @media screen and (min-width: 1199px) {
@@ -85,22 +88,29 @@ section {
     .feature-block {
         padding-top: 20px;
         padding-bottom: 40px;
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        @media screen and (min-width: 1024px) {
+            justify-content: space-between;
+        }
         .feature-item {
             position: relative;
             padding-left: 3rem;
             @media screen and (min-width: 374px) {
                 padding-left: 3.5rem;
             }
-            @media screen and (min-width: 1200px) {
-                padding-left: 4rem;
+            @media screen and (min-width: 768px) {
+                padding-left: 4.5rem;
+            }
+            @media screen and (min-width: 1024px) {
+                padding-left: 3.5rem;
             }
             @media screen and (min-width: 1200px) {
                 padding-left: 4rem;
             }
             @media screen and (min-width: 1440px) {
-                font-size: 4.5rem;
+                padding-left: 4.5rem;
             }
             i.icon {
                 position: absolute;
@@ -109,6 +119,12 @@ section {
                 font-size: 2.5rem;
                 @include translateY(-50%);
                 @media screen and (min-width: 374px) {
+                    font-size: 3rem;
+                }
+                @media screen and (min-width: 768px) {
+                    font-size: 3.85rem;
+                }
+                @media screen and (min-width: 1024px) {
                     font-size: 3rem;
                 }
                 @media screen and (min-width: 1200px) {
@@ -126,6 +142,12 @@ section {
                 @media screen and (min-width: 374px) {
                     font-size: 1.5rem;
                 }
+                @media screen and (min-width: 768px) {
+                    font-size: 2.25rem;
+                }
+                @media screen and (min-width: 1024px) {
+                    font-size: 1.5rem;
+                }
                 @media screen and (min-width: 1200px) {
                     font-size: 2rem;
                 }
@@ -135,6 +157,12 @@ section {
             }
             .feature-sub {
                 font-size: 1rem;
+                @media screen and (min-width: 768px) {
+                    font-size: 1.625rem;
+                }
+                @media screen and (min-width: 1024px) {
+                    font-size: 1rem;
+                }
                 @media screen and (min-width: 1200px) {
                     font-size: 1.325rem;
                 }
@@ -317,7 +345,7 @@ section {
             position: relative;
             height: 50vw;
             @media screen and (min-width: 768px) {
-                height: 25vw;
+                height: 50%;
             }
             @media screen and (min-width: 1024px) {
                 height: 33.3vh; // 66.6vh / 2
@@ -446,6 +474,6 @@ section {
     }
 }
 
-* {
-    // opacity: 0.8 !important;
+body > * {
+    // opacity: 0.05 !important;
 }

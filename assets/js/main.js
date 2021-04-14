@@ -10,7 +10,7 @@ $(function () {
 		$('.row-grid').addClass('row-ie');
 		$('.opening').addClass('opening-ie');
 	}
-	if (width < 1024) {
+	if (width <= 1024) {
 		$(".hamburger").on("click", function () {
 			$(this).toggleClass("active");
 			$("nav").animate({ width: "toggle" }, 500);
@@ -43,7 +43,7 @@ $(function () {
 		}, 1000);
 		return false;
 	});
-	if (width >= 1024) {
+	if (width >= 768) {
 		$('.section-first').css('height', height);
 		$('.row-img').each(function(){
 			$(this).css('min-height', ((height-headerHeight)*0.666));
