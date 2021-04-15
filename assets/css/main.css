@@ -5734,7 +5734,7 @@ section.list-section {
 section .slider-opening {
   width: 100%;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   section .slider-opening {
     min-height: 158vw;
   }
@@ -5744,7 +5744,15 @@ section .slider-opening {
     display: none;
   }
 }
-@media screen and (min-width: 1024px) {
+section .slider-opening.pad {
+  display: none;
+}
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  section .slider-opening.pad {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
   section .slider-opening.mobile {
     display: none;
   }
@@ -5924,6 +5932,11 @@ section .col-op-txt {
   section .col-op-txt {
     padding-top: 10px;
     height: 81vw;
+  }
+}
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  section .col-op-txt {
+    height: 35vw;
   }
 }
 section .col-op-img {

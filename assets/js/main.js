@@ -43,8 +43,10 @@ $(function () {
 		}, 1000);
 		return false;
 	});
+	if (width >= 1024) {
+		$('.section-first').css('min-height', height);
+	}
 	if (width >= 768) {
-		$('.section-first').css('height', height);
 		$('.row-img').each(function(){
 			$(this).css('min-height', ((height-headerHeight)*0.666));
 		})
