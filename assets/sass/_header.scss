@@ -30,10 +30,22 @@ header {
         justify-content: space-between;
     }
     a.logo {
-        display: block;
+        display: flex;
         font-size: $h3;
         letter-spacing: 0.225em;
         width: calc( (#{$h3} + 0.3em) * 5);
+        align-items: center;
+        img {
+            height: 3.2rem;
+            margin-right: 0.225em;
+            margin-top: -0.55rem;
+            margin-bottom: -0.55rem;
+            @media screen and (min-width: 1200px) {
+                height: 3.75rem;
+                margin-top: -0.8rem;
+                margin-bottom: -0.8rem;
+            }          
+        }
     }
 }
 

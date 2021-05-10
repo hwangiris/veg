@@ -290,7 +290,6 @@ section {
         }
     }
     .img-shadow {
-        position: relative;
         &::before {
             position: absolute;
             top: 0;
@@ -466,7 +465,7 @@ section {
                 border-right: 1px solid $text;
             }
             .list-content {
-                width: calc(100% - 55px);
+                // width: calc(100% - 55px);
                 a {
                     color: $text;
                     &:hover, &:active, &.active, &:focus {

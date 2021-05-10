@@ -20,17 +20,23 @@
     }
 }
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
     margin-left: -20px;
     margin-right: -20px;
+    font-size: 0;
+    text-align: center;
 }
 [class^="col-"],
 [class*=" col-"] {
+    display: inline-block;
+    vertical-align: text-top;
     padding-left: 20px;
     padding-right: 20px;
     width: 100%;
+    font-size: 1rem;
+    text-align: left;
 }
 
 $unit: (1/12)*100%;
@@ -93,7 +99,7 @@ $display: none, block, inline-block, flex, inline-flex, grid, inline-grid;
 }
 @for $i from 1 through length($align) {
     .text-#{nth($align,$i)} {
-        text-align: #{nth($align, $i)};
+        text-align: #{nth($align, $i)} !important;
     }
 }
 @for $i from 1 through length($line) {
@@ -162,7 +168,7 @@ $display: none, block, inline-block, flex, inline-flex, grid, inline-grid;
     }
     @for $i from 1 through length($align) {
         .text-xs-#{nth($align,$i)} {
-            text-align: #{nth($align, $i)};
+            text-align: #{nth($align, $i)} !important;
         }
     }
     @for $i from 1 through length($line) {
@@ -232,7 +238,7 @@ $display: none, block, inline-block, flex, inline-flex, grid, inline-grid;
     }
     @for $i from 1 through length($align) {
         .text-sm-#{nth($align,$i)} {
-            text-align: #{nth($align, $i)};
+            text-align: #{nth($align, $i)} !important;
         }
     }
     @for $i from 1 through length($line) {
@@ -302,7 +308,7 @@ $display: none, block, inline-block, flex, inline-flex, grid, inline-grid;
     }
     @for $i from 1 through length($align) {
         .text-md-#{nth($align,$i)} {
-            text-align: #{nth($align, $i)};
+            text-align: #{nth($align, $i)} !important;
         }
     }
     @for $i from 1 through length($line) {
@@ -372,7 +378,7 @@ $display: none, block, inline-block, flex, inline-flex, grid, inline-grid;
     }
     @for $i from 1 through length($align) {
         .text-lg-#{nth($align,$i)} {
-            text-align: #{nth($align, $i)};
+            text-align: #{nth($align, $i)} !important;
         }
     }
     @for $i from 1 through length($line) {
@@ -442,7 +448,7 @@ $display: none, block, inline-block, flex, inline-flex, grid, inline-grid;
     }
     @for $i from 1 through length($align) {
         .text-xl-#{nth($align,$i)} {
-            text-align: #{nth($align, $i)};
+            text-align: #{nth($align, $i)} !important;
         }
     }
     @for $i from 1 through length($line) {

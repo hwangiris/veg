@@ -293,18 +293,21 @@ textarea {
 }
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   margin-left: -20px;
   margin-right: -20px;
+  font-size: 0;
+  text-align: center;
 }
 
 [class^="col-"],
 [class*=" col-"] {
+  display: inline-block;
+  vertical-align: text-top;
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
+  font-size: 1rem;
+  text-align: left;
 }
 
 .col-1 {
@@ -1016,15 +1019,15 @@ textarea {
 }
 
 .text-left {
-  text-align: left;
+  text-align: left !important;
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .text-right {
-  text-align: right;
+  text-align: right !important;
 }
 
 .line-height-1000 {
@@ -1789,15 +1792,15 @@ textarea {
   }
 
   .text-xs-left {
-    text-align: left;
+    text-align: left !important;
   }
 
   .text-xs-center {
-    text-align: center;
+    text-align: center !important;
   }
 
   .text-xs-right {
-    text-align: right;
+    text-align: right !important;
   }
 
   .line-height-xs-1000 {
@@ -2562,15 +2565,15 @@ textarea {
   }
 
   .text-sm-left {
-    text-align: left;
+    text-align: left !important;
   }
 
   .text-sm-center {
-    text-align: center;
+    text-align: center !important;
   }
 
   .text-sm-right {
-    text-align: right;
+    text-align: right !important;
   }
 
   .line-height-sm-1000 {
@@ -3335,15 +3338,15 @@ textarea {
   }
 
   .text-md-left {
-    text-align: left;
+    text-align: left !important;
   }
 
   .text-md-center {
-    text-align: center;
+    text-align: center !important;
   }
 
   .text-md-right {
-    text-align: right;
+    text-align: right !important;
   }
 
   .line-height-md-1000 {
@@ -4108,15 +4111,15 @@ textarea {
   }
 
   .text-lg-left {
-    text-align: left;
+    text-align: left !important;
   }
 
   .text-lg-center {
-    text-align: center;
+    text-align: center !important;
   }
 
   .text-lg-right {
-    text-align: right;
+    text-align: right !important;
   }
 
   .line-height-lg-1000 {
@@ -4881,15 +4884,15 @@ textarea {
   }
 
   .text-xl-left {
-    text-align: left;
+    text-align: left !important;
   }
 
   .text-xl-center {
-    text-align: center;
+    text-align: center !important;
   }
 
   .text-xl-right {
-    text-align: right;
+    text-align: right !important;
   }
 
   .line-height-xl-1000 {
@@ -4947,7 +4950,7 @@ textarea {
 h1, .h1 {
   margin-top: 1em;
   margin-bottom: 1em;
-  font-size: 2.75rem !important;
+  font-size: 2.5rem !important;
 }
 @media screen and (min-width: 1200px) {
   h1, .h1 {
@@ -4962,7 +4965,7 @@ h2, .h2 {
 }
 @media screen and (min-width: 1200px) {
   h2, .h2 {
-    font-size: 2.75rem !important;
+    font-size: 2.5rem !important;
   }
 }
 
@@ -5265,10 +5268,24 @@ header .flex {
   justify-content: space-between;
 }
 header a.logo {
-  display: block;
+  display: flex;
   font-size: 2.25rem;
   letter-spacing: 0.225em;
   width: calc( (2.25rem + 0.3em) * 5);
+  align-items: center;
+}
+header a.logo img {
+  height: 3.2rem;
+  margin-right: 0.225em;
+  margin-top: -0.55rem;
+  margin-bottom: -0.55rem;
+}
+@media screen and (min-width: 1200px) {
+  header a.logo img {
+    height: 3.75rem;
+    margin-top: -0.8rem;
+    margin-bottom: -0.8rem;
+  }
 }
 
 .hamburger {
@@ -5478,10 +5495,6 @@ nav ul li a > * {
 
 footer {
   font-size: 0.875rem;
-  background-image: url("../images/bg-left.png");
-  background-position: top left;
-  background-repeat: no-repeat;
-  background-color: #f8f8f8;
 }
 footer > .container-fluid:first-child {
   background-image: url("../images/bg-right.png");
@@ -6018,9 +6031,6 @@ section .row-txt {
     left: 20px;
     right: 20px;
   }
-}
-section .img-shadow {
-  position: relative;
 }
 section .img-shadow::before {
   position: absolute;
@@ -6866,9 +6876,6 @@ section .grid-group .grid-item:hover > span.grid-hover {
   padding-right: 10px;
   margin-right: 10px;
   border-right: 1px solid #8b8d8b;
-}
-.map-group .contact-list li .list-content {
-  width: calc(100% - 55px);
 }
 .map-group .contact-list li .list-content a {
   color: #8b8d8b;
