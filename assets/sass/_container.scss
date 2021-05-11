@@ -23,7 +23,7 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    
+
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -32,18 +32,18 @@
 
     margin-left: -20px;
     margin-right: -20px;
-    font-size: 0;
-    text-align: center;
+    // font-size: 0;
+    // text-align: center;
 }
 [class^="col-"],
 [class*=" col-"] {
-    display: inline-block;
-    vertical-align: text-top;
+    // display: inline-block;
+    // vertical-align: text-top;
     padding-left: 20px;
     padding-right: 20px;
     width: 100%;
-    font-size: 1rem;
-    text-align: left;
+    // font-size: 1rem;
+    // text-align: left;
 }
 
 $unit: (1/12)*100%;
