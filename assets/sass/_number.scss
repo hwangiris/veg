@@ -1,12 +1,12 @@
 .number-group {
     position: absolute !important;
     bottom: 0;
-    left: 50%;
+    left: 0;
     width: 100%;
     height: auto !important;
     margin: auto !important;
     justify-content: center;
-    @include translateX(-50%);
+    // @include translateX(-50%);
     .number-item {
         color: $white;
         font-size: 16px;

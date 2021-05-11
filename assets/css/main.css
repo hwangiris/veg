@@ -5917,6 +5917,7 @@ section .slider-inpage {
   position: absolute;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 section .slider-inpage .slick-list, section .slider-inpage .slick-track {
   height: 100%;
@@ -6003,7 +6004,11 @@ section .row-img .row, section .row-img .container {
   height: 100%;
 }
 section .row-img .row.py-40, section .row-img .container.py-40 {
-  align-content: flex-end;
+  position: relative;
+}
+section .row-img .row.py-40 .label, section .row-img .container.py-40 .label {
+  position: absolute;
+  bottom: 40px;
 }
 section .row-img .label {
   background-color: rgba(0, 181, 4, 0.6);
@@ -6051,7 +6056,7 @@ section .img-shadow::before {
   background-image: -moz-linear-gradient(top, rgba(23, 27, 23, 0) 0%, #171b17 100%);
   background-image: -webkit-linear-gradient(top, rgba(23, 27, 23, 0) 0%, #171b17 100%);
   background-image: linear-gradient(to bottom, rgba(23, 27, 23, 0) 0%, #171b17 100%);
-  z-index: -1;
+  z-index: 0;
 }
 @media screen and (max-width: 1023px) {
   section .btn-group {
@@ -6177,15 +6182,11 @@ section .grid-group .grid-item:hover > span.grid-hover {
 .number-group {
   position: absolute !important;
   bottom: 0;
-  left: 50%;
+  left: 0;
   width: 100%;
   height: auto !important;
   margin: auto !important;
   justify-content: center;
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
 }
 .number-group .number-item {
   color: #fff;
