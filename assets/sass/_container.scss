@@ -23,14 +23,14 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    
     flex-wrap: wrap;
-    /* Center vertically */
     align-items: center;
-    /*Center horizontaly */
     justify-content: center;
-    /*Center horizontaly ie */
     -ms-flex-pack: center;
-     margin-left: -20px;
+    -ms-flex-align:center;
+
+    margin-left: -20px;
     margin-right: -20px;
     font-size: 0;
     text-align: center;
