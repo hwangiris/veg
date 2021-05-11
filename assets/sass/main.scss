@@ -290,6 +290,7 @@ section {
         }
     }
     .img-shadow {
+        position: relative;
         &::before {
             position: absolute;
             top: 0;
