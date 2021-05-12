@@ -267,9 +267,6 @@ textarea {
   padding-left: 20px;
   padding-right: 20px;
 }
-.container-fluid > .row {
-  flex-direction: column;
-}
 
 .container {
   padding-left: 20px;
@@ -5500,6 +5497,9 @@ nav ul li a > * {
 
 footer {
   font-size: 0.875rem;
+}
+footer > .container-fluid > .row {
+  flex-direction: column;
 }
 footer > .container-fluid:first-child {
   background-image: url("../images/bg-right.png");

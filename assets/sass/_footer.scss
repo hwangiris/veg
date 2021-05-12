@@ -4,10 +4,15 @@ footer {
     // background-position: top left;
     // background-repeat: no-repeat;
     // background-color: $gray;
-    > .container-fluid:first-child {
-        background-image: url('../images/bg-right.png');
-        background-position: bottom right;
-        background-repeat: no-repeat;
+    > .container-fluid {
+        > .row {
+            flex-direction: column;
+        }
+        &:first-child {
+            background-image: url('../images/bg-right.png');
+            background-position: bottom right;
+            background-repeat: no-repeat;
+        }
     }
     img {
         margin-left: auto;
