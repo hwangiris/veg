@@ -278,6 +278,7 @@ section {
     .row-txt {
         min-height: 33.4%;
         > .row {
+            flex-direction: column;
             > .container {
                 > .row {
                     @media screen and (max-width: 1023px) {
