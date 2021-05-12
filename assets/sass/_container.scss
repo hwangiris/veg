@@ -16,14 +16,23 @@
         width: 1200px;
     }
     @include breakpoint (1440px) {
+        width: 1380px;
+    }
+    @include breakpoint (1480px) {
         width: $container;
     }
 }
 .row {
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    -ms-flex-wrap: wrap;
+
     flex-wrap: wrap;
+    justify-content: center;
+    -ms-flex-pack: center;
+    // align-items: center;
+    // -ms-flex-align:center;
+
     margin-left: -20px;
     margin-right: -20px;
     // font-size: 0;
@@ -31,7 +40,7 @@
 }
 [class^="col-"],
 [class*=" col-"] {
-    position: relative;
+    // position: relative;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;

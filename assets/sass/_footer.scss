@@ -35,16 +35,13 @@ footer {
     i {
         &.icon-line {
             display: block;
-            width: 1.5rem;
-            height: 1.5rem;
+            padding: 0.3125rem;
             text-align: center;
             background-color: $green;
             @include border-radius(50%);
             &::before {
                 display: block;
-                padding-top: .175rem;
                 font-size: 0.875rem;
-                line-height: 1.2rem;
             }
         }
         &.icon-phone {

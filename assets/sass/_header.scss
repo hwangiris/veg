@@ -172,6 +172,8 @@ nav {
 }
 
 .line-btn {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     background-color: $white;
     @include border-radius(50px);
@@ -180,16 +182,12 @@ nav {
         min-width: 215px;
     }
     .icon-line {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: $h1;
-        height: $h1;
-        font-size: $h1;
-        background-color: $green;
-        @include border-radius(50%);
         &::before {
-            font-size: 0.65em;
+            display: block;
+            padding: ($h1 - $h3)/2;
+            font-size: $h3;
+            background-color: $green;
+            @include border-radius(50%);
         }
     }
     span {

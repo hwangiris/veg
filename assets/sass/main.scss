@@ -256,16 +256,18 @@ section {
         }
         .row, .container {
             height: 100%;
-            &.py-40 {
-                position: relative;
-                .label {
-                    position: absolute;
-                    bottom: 40px;
-                }
+        }
+        .label-wow {
+            height: 100%;
+            .label {
+                position: absolute;
+                bottom: 40px;
             }
         }
         .label {
+            left: 50%;
             background-color: rgba($green, 0.6);
+            @include translateX(-50%);
             @media screen and (max-width: 1023px) {
                 width: 80%;
                 font-size: $h4 !important;
@@ -297,6 +299,7 @@ section {
     }
     .img-shadow {
         position: relative;
+        display: block;
         &::before {
             position: absolute;
             top: 0;
