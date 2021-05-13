@@ -5591,12 +5591,12 @@ nav ul li a > * {
   display: inline-block;
   vertical-align: middle;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   nav ul li + li {
     border-top: 1px solid rgba(248, 248, 248, 0.15);
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   nav ul li + li {
     margin-left: 10px;
   }
@@ -5624,7 +5624,7 @@ nav ul li a > * {
     min-width: 215px;
   }
 }
-.line-btn .icon-line::before {
+.line-btn .icon-line {
   display: block;
   padding: 0.625rem;
   font-size: 2.25rem;
@@ -5917,7 +5917,7 @@ section .slider-opening {
 section .slider-opening.pad {
   display: none;
 }
-@media screen and (min-width: 768px) and (orientation: portrait) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   section .slider-opening.pad {
     display: block;
   }
@@ -5944,6 +5944,11 @@ section .feature-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 580px) and (max-width: 1023px) {
+  section .feature-block {
+    flex-direction: column;
+  }
 }
 @media screen and (min-width: 1024px) {
   section .feature-block {
@@ -6152,7 +6157,7 @@ section .col-txt > * {
 }
 @media screen and (min-width: 768px) {
   section .row-img {
-    min-height: 66.6%;
+    min-height: 66.6vh;
   }
 }
 section .row-img .row, section .row-img .container {
@@ -6185,7 +6190,7 @@ section .row-img .label {
   }
 }
 section .row-txt {
-  min-height: 33.4%;
+  min-height: 33.4vh;
 }
 section .row-txt > .row {
   flex-direction: column;
@@ -7056,6 +7061,16 @@ section .grid-group .grid-item:hover > span.grid-hover {
 
 .interest-section a.btn {
   background-color: transparent;
+}
+
+body.ie-mode section .wow {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+body.ff-ms-mode .icon::before {
+  position: relative;
+  top: 0.1em;
 }
 
 /*# sourceMappingURL=main.css.map */

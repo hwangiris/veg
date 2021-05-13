@@ -157,10 +157,10 @@ nav {
                 }
             }
             + li {
-                @media screen and (max-width: 1023px) {
+                @media screen and (max-width: 1199px) {
                     border-top: 1px solid rgba($gray, 0.15);
                 }
-                @media screen and (min-width: 1024px) {
+                @media screen and (min-width: 1200px) {
                     margin-left: 10px;
                 }
                 @media screen and (min-width: 1440px) {
@@ -182,13 +182,11 @@ nav {
         min-width: 215px;
     }
     .icon-line {
-        &::before {
-            display: block;
-            padding: ($h1 - $h3)/2;
-            font-size: $h3;
-            background-color: $green;
-            @include border-radius(50%);
-        }
+        display: block;
+        padding: ($h1 - $h3)/2;
+        font-size: $h3;
+        background-color: $green;
+        @include border-radius(50%);
     }
     span {
         display: block;
