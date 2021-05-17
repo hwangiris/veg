@@ -284,20 +284,6 @@ section {
         min-height: 33.4vh;
         > .row {
             flex-direction: column;
-            > .container {
-                > .row {
-                    @media screen and (max-width: 1023px) {
-                        position: relative;
-                        padding-bottom: 60px;
-                        .btn-group {
-                            position: absolute;
-                            bottom: 0;
-                            left: 20px;
-                            right: 20px;
-                        }
-                    }
-                }
-            }
         }
     }
     .img-shadow {
@@ -359,13 +345,19 @@ section {
         }
     }
     .grid-group {
-        > .row {
+        > .grid-content {
+            margin-left: -20px;
+            margin-right: -20px;
             height: 100%;
+            font-size: 0;
         }
         .grid-item {
             position: relative;
+            display: inline-block;
+            width: calc(100% / 2);
             height: 50vw;
             @media screen and (min-width: 768px) {
+                width: calc(100% / 4);
                 height: 50%;
             }
             @media screen and (min-width: 1024px) {

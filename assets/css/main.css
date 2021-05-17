@@ -6195,18 +6195,6 @@ section .row-txt {
 section .row-txt > .row {
   flex-direction: column;
 }
-@media screen and (max-width: 1023px) {
-  section .row-txt > .row > .container > .row {
-    position: relative;
-    padding-bottom: 60px;
-  }
-  section .row-txt > .row > .container > .row .btn-group {
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    right: 20px;
-  }
-}
 section .img-shadow {
   position: relative;
   display: block;
@@ -6275,15 +6263,21 @@ section ul.contact li a > i.icon.icon-line {
 section ul.contact li a > i.icon.icon-line::before {
   font-size: 0.875rem;
 }
-section .grid-group > .row {
+section .grid-group > .grid-content {
+  margin-left: -20px;
+  margin-right: -20px;
   height: 100%;
+  font-size: 0;
 }
 section .grid-group .grid-item {
   position: relative;
+  display: inline-block;
+  width: calc(100% / 2);
   height: 50vw;
 }
 @media screen and (min-width: 768px) {
   section .grid-group .grid-item {
+    width: calc(100% / 4);
     height: 50%;
   }
 }
